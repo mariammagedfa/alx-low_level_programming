@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
 /**
  * main - Entry point
  *
@@ -8,6 +6,19 @@
  */
 int main(void)
 {
+	long int sum;
+	int start;
 
+	start = 0;
+	sum = 0;
+	while (start < 1024)
+	{
+		if (start % 3 == 0  || start % 5 == 0)
+		{
+			sum = sum + start;
+		}
+		start++;
+	}
+	printf("%li\n", sum);
 	return (0);
 }

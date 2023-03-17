@@ -4,21 +4,26 @@
  * @n: number input
  * Return: 1 prints '+' if n > 0, 0 prints '0' if n = 0, -1 prints '-' if n < 0
  */
-int print_sign(int n)
+int print_sign(int c)
 {
-	if (n > 0)
+	char sign;
+	int value;
+
+	if (c > 0)
 	{
-		_putchar ('+');
-		return (1);
+		value = 1;
+		sign = '+';
 	}
-	else if (n == 0)
+	else if (c < 0)
 	{
-		_putchar ('0');
-		return (0);
+		value = -1;
+		sign = '-';
 	}
 	else
 	{
-		_putchar ('-');
-		return (-1);
+		value = 0;
+		sign = '0';
 	}
+	_putchar(sign);
+	return (value);
 }
