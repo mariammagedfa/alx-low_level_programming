@@ -1,32 +1,25 @@
 #include "holberton.h"
-
 /**
- * print_sign - Test wheter c is greater than zero, less or iqual to zero.
- * @c: Number to test
- *
- * Return: Sign from a number.
+ * print_sign - a function that prints the sign of a number
+ * @n: number input
+ * Return: 1 prints '+' if n > 0, 0 prints '0' if n = 0, -1 prints '-' if n < 0
  */
-
-int print_sign(int c)
+int print_sign(int n)
 {
-	char sign;
-	int value;
-
-	if (c > 0)
+	if (n > 0)
 	{
-		value = 1;
-		sign = '+';
+		_putchar ('+');
+		return (1);
 	}
-	else if (c < 0)
+	else if (n == 0)
 	{
-		value = -1;
-		sign = '-';
+		_putchar ('0');
+		return (0);
 	}
 	else
 	{
-		value = 0;
-		sign = '0';
+		_putchar ('-');
+		return (-1);
 	}
-	_putchar(sign);
-	return (value);
 }
+
