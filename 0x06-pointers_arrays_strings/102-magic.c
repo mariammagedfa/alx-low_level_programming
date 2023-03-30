@@ -1,11 +1,5 @@
 #include <stdio.h>
-/**
- * main - print specific number
- * @n - location
- * *@p - pointer to place
- * @a - arrray
- * Return: Alwaiys 0 (success)
- */
+
 int main(void)
 {
 	int n;
