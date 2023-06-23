@@ -1,28 +1,22 @@
 #include "main.h"
 /**
- * _strpbrk - find the first character in the string s that matches any
- * character specified in accept.
- * @s:string to be scanned
- * @accept:string that contain the character to match.
- *
- * Return: pointer to the character in s that matches one of the characters
- * in accept or NULL if no such character is found.
+ * _strpbrk - Entry point
+ * @s: Input
+ * @accept: Input
+ * Return: Always 0 (Success)
  */
-
 char *_strpbrk(char *s, char *accept)
 {
-	char *p;
+	int k;
 
 	while (*s)
 	{
-		p = accept;
-		while (*p)
+		for (k = 0; accept[k]; k++)
 		{
-			if (*p == *s)
-				return (s);
-			p++;
+		if (*s == accept[k])
+		return (s);
 		}
-		s++;
+	s++;
 	}
 	return ('\0');
 }
