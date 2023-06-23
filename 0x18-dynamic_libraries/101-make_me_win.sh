@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -P /tmp/ https://raw.github.com/mariammagedfa/alx-low_level_programming/master/0x18-dynamic_libraries/nrandom.so
-export LD_PRELOAD=/tmp/nrandom.so
+gcc *.o -fPIC -shared -o libgmwin.so
+export LD_PRELOAD="$WPD/libgmwin.so"
